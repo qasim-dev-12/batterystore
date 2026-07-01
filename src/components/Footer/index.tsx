@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -10,25 +9,13 @@ const Footer = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="mb-12 max-w-[360px] lg:mb-16">
-                <Link href="/" className="mb-8 inline-block">
-                  <Image
-                    src="/images/logo/logo-2.svg"
-                    alt="logo"
-                    className="w-full dark:hidden"
-                    width={140}
-                    height={30}
-                  />
-                  <Image
-                    src="/images/logo/logo.svg"
-                    alt="logo"
-                    className="hidden w-full dark:block"
-                    width={140}
-                    height={30}
-                  />
+                <Link href="/" className="mb-8 inline-flex items-center gap-2">
+                  <img src="/images/logo/logo50.png" alt="800 Speedy" className="h-10 w-auto" />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis.
+                  Battery Store is your one-stop battery shop in Dubai,
+                  specialising in on-the-spot automotive services, available
+                  24/7, 365 days a year.
                 </p>
                 <div className="flex items-center">
                   <a
@@ -112,9 +99,25 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Useful Links
+                  Battery Store
                 </h2>
                 <ul>
+                  <li>
+                    <Link
+                      href="/areas"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      Areas
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/warranty"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      Warranty
+                    </Link>
+                  </li>
                   <li>
                     <Link
                       href="/blog"
@@ -125,18 +128,10 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/contact"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Pricing
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      About
+                      Contact
                     </Link>
                   </li>
                 </ul>
@@ -146,33 +141,29 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Terms
+                  Our Services
                 </h2>
                 <ul>
-                  <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      TOS
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Privacy Policy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Refund Policy
-                    </Link>
-                  </li>
+                  {[
+                    { slug: "car-battery-replacement", label: "Car Battery Replacement" },
+                    { slug: "battery-diagnostics-jumpstart", label: "Battery Diagnostics & Jumpstart" },
+                    { slug: "tyre-replacement", label: "Tyre Replacement" },
+                    { slug: "tyre-repair", label: "Tyre Repair" },
+                    { slug: "flat-tyre-replacement", label: "Flat Tyre Replacement" },
+                    { slug: "flat-tyre-repair", label: "Flat Tyre Repair" },
+                    { slug: "roadside-assistance", label: "Roadside Assistance" },
+                    { slug: "car-towing-recovery", label: "Car Towing & Recovery" },
+                    { slug: "car-recovery-dubai", label: "Car Recovery Dubai" },
+                  ].map((s) => (
+                    <li key={s.slug}>
+                      <Link
+                        href={`/services/${s.slug}`}
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        {s.label}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -180,33 +171,21 @@ const Footer = () => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Support & Help
+                  Battery Brands
                 </h2>
                 <ul>
-                  <li>
-                    <Link
-                      href="/contact"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Open Support Ticket
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Terms of Use
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      About
-                    </Link>
-                  </li>
+                  {["amaron", "bosch", "varta", "dynex", "max-gold", "max-part"].map(
+                    (slug) => (
+                      <li key={slug}>
+                        <Link
+                          href={`/battery-brands/${slug}`}
+                          className="mb-4 inline-block text-base text-body-color capitalize duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                        >
+                          {slug.replace("-", " ")} Battery
+                        </Link>
+                      </li>
+                    ),
+                  )}
                 </ul>
               </div>
             </div>

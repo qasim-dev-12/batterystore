@@ -1,38 +1,97 @@
-import Link from "next/link";
+const bullets = [
+  {
+    bg: "bg-red-500",
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5"><path d="M3 12h18M12 3l9 9-9 9"/></svg>,
+    text: "Emergency? Get 24/7 Roadside Help Now!",
+    short: "24/7 Emergency Help",
+  },
+  {
+    bg: "bg-blue-500",
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>,
+    text: "Shop Now, Pay Later with Tabby or Tamara",
+    short: "Pay Later: Tabby or Tamara",
+  },
+  {
+    bg: "bg-green-600",
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
+    text: "Unlock Up to 24 Months of Free Warranty",
+    short: "Up to 24 Months Warranty",
+  },
+  {
+    bg: "bg-orange-500",
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>,
+    text: "Free Delivery & Installation",
+    short: "Free Delivery & Installation",
+  },
+  {
+    bg: "bg-yellow-600",
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>,
+    text: "500+ Google Reviews — Trusted in Dubai",
+    short: "500+ Google Reviews",
+  },
+  {
+    bg: "bg-purple-600",
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>,
+    text: "Available in Dubai, Sharjah, Abu Dhabi & Ajman",
+    short: "Dubai, Sharjah & Abu Dhabi",
+  },
+];
 
 const Hero = () => {
   return (
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative z-10 overflow-hidden bg-white pb-8 pt-[90px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
       >
         <div className="container">
-          <div className="-mx-4 flex flex-wrap">
+          {/* Original heading */}
+          <div className="-mx-4 flex flex-wrap mb-5">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  Free and Open-Source Next.js Template for Startup & SaaS
+                <h1 className="mb-5 text-2xl font-bold leading-tight text-primary sm:text-4xl sm:text-black sm:leading-tight sm:dark:text-white md:text-5xl md:leading-tight">
+                  New Car Battery Replacement Dubai
                 </h1>
-                <p className="mb-12 text-base leading-relaxed! text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  Startup is free Next.js template for startups and SaaS
-                  business websites comes with all the essential pages,
-                  components, and sections you need to launch a complete
-                  business website, built-with Next 16.x and Tailwind CSS.
-                </p>
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <Link
-                    href="https://nextjstemplates.com/templates/saas-starter-startup"
-                    className="rounded-xs bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+              </div>
+            </div>
+          </div>
+
+          <div className="-mx-4 flex flex-wrap items-center">
+            {/* Yellow card */}
+            <div className="w-full px-4">
+              <div className="mx-auto max-w-2xl rounded-3xl bg-dark px-6 py-8 ring-1 ring-stroke-dark shadow-[0_8px_40px_rgba(52,235,229,0.12)] md:px-14 md:py-14">
+                <h2 className="mb-4 text-xl font-bold leading-tight text-white sm:text-3xl">
+                  <span style={{fontSize:"16px"}} className="sm:hidden text-primary">Get Installation in 30 mins</span>
+                  <span className="hidden sm:inline">24/7 Onsite Car Battery <span className="text-primary">Replacement</span> at your Service</span>
+                </h2>
+                <ul className="mb-5 space-y-3">
+                  {bullets.map((b) => (
+                    <li key={b.text} className="flex items-center gap-3 text-base font-medium text-body-color-dark">
+                      <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full sm:h-10 sm:w-10 ${b.bg}`}>
+                        {b.icon}
+                      </span>
+                      <span className="sm:hidden text-sm">{b.short}</span>
+                      <span className="hidden sm:inline">{b.text}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="hidden sm:flex flex-wrap gap-4">
+                  <a
+                    href="https://wa.me/971556253749"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-base font-bold text-white shadow-lg animate-[sway_1.5s_ease-in-out_infinite] hover:shadow-[0_8px_25px_rgba(37,211,102,0.5)] active:scale-95"
                   >
-                    🔥 Get Pro
-                  </Link>
-                  <Link
-                    href="https://github.com/NextJSTemplates/startup-nextjs"
-                    className="inline-block rounded-xs bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
+                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp Us
+                  </a>
+                  <a
+                    href="tel:+971556253749"
+                    className="flex items-center gap-2 rounded-full bg-[#8BC34A] px-6 py-3 text-base font-bold text-white shadow-lg animate-[sway_1.5s_ease-in-out_infinite_0.75s] hover:shadow-[0_8px_25px_rgba(139,195,74,0.5)] active:scale-95"
                   >
-                    Star on GitHub
-                  </Link>
+                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    Call Us
+                  </a>
                 </div>
               </div>
             </div>
@@ -280,6 +339,25 @@ const Hero = () => {
           </svg>
         </div>
       </section>
+      {/* Fixed bottom CTA bar — mobile only */}
+      <div className="fixed bottom-3 left-0 z-50 flex w-full justify-center gap-3 px-4 sm:hidden">
+        <a
+          href="https://wa.me/971556253749"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] py-2.5 text-xs font-bold text-white shadow-lg animate-[sway_1.5s_ease-in-out_infinite] active:scale-95"
+        >
+          <svg className="h-4 w-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <a
+          href="tel:+971556253749"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full bg-[#8BC34A] py-2.5 text-xs font-bold text-white shadow-lg animate-[sway_1.5s_ease-in-out_infinite_0.75s] active:scale-95"
+        >
+          <svg className="h-4 w-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          Call Us
+        </a>
+      </div>
     </>
   );
 };

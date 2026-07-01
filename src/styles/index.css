@@ -5,6 +5,21 @@ layer(base);
 
 @custom-variant dark (&:is(.dark *));
 
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes sway {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(8px); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 @theme {
   --breakpoint-*: initial;
   --breakpoint-xs: 450px;
@@ -19,11 +34,11 @@ layer(base);
   --color-white: #ffffff;
   --color-black: #121723;
   --color-dark: #1d2430;
-  --color-primary: #4a6cf7;
+  --color-primary: #34ebe5;
   --color-yellow: #fbb040;
   --color-bg-color-dark: #171c28;
 
-  --color-body-color: #788293;
+  --color-body-color: #fff;
   --color-body-color-dark: #959cb1;
 
   --color-stroke-stroke: #e3e8ef;
@@ -31,7 +46,7 @@ layer(base);
 
   --color-gray-50: #f9fafb;
   --color-gray-100: #f3f4f6;
-  --color-gray-200: #e5e7eb;
+  --color-gray-200: #ffffff;
   --color-gray-300: #d1d5db;
   --color-gray-400: #9ca3af;
   --color-gray-500: #6b7280;
@@ -79,6 +94,26 @@ layer(base);
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
+  }
+
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: var(--color-primary) !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-black);
+  }
+
+  .dark p {
+    color: var(--color-white) !important;
+  }
+
+  .text-primary {
+    color: var(--color-primary) !important;
+  }
+
+  .bg-primary {
+    color: var(--color-black) !important;
   }
 }
 
