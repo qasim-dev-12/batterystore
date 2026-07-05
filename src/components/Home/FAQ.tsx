@@ -14,7 +14,7 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section className="py-16 md:py-20 lg:py-28">
+    <section className="py-10 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
           title="Common Questions About Car Battery Services in Dubai"

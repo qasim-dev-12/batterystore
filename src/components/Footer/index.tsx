@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-flex items-center gap-2">
-                  <img src="/images/logo/logo50.png" alt="800 Speedy" className="h-10 w-auto" />
+                  <img src="/images/logo/logo-new.png" alt="800 Speedy" className="h-10 w-auto" />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
                   Battery Store is your one-stop battery shop in Dubai,
@@ -194,24 +194,7 @@ const Footer = () => {
           <div className="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">
-              Template by{" "}
-              <a
-                href="http://uideck.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary"
-              >
-                UIdeck
-              </a>{" "}
-              and{" "}
-              <a
-                href="https://nextjstemplates.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary"
-              >
-                Next.js Templates
-              </a>
+              © {new Date().getFullYear()} 800 Speedy. All rights reserved. Genuine batteries, 24/7 doorstep delivery across the UAE.
             </p>
           </div>
         </div>

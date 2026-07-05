@@ -17,7 +17,7 @@ const featured = services.filter((s) =>
 
 const ServicesGrid = () => {
   return (
-    <section className="bg-gray-light dark:bg-bg-color-dark py-16 md:py-20 lg:py-28">
+    <section className="bg-gray-light dark:bg-bg-color-dark py-10 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
           title="Emergency Mobile Battery Replacement in Dubai & Roadside Services"

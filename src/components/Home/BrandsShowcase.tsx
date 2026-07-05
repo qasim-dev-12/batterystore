@@ -4,14 +4,14 @@ import batteryBrands from "@/data/batteryBrands";
 
 const BrandsShowcase = () => {
   return (
-    <section className="py-16 md:py-20 lg:py-28">
+    <section className="py-10 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
           title="Not Your Average Battery Shop in Dubai — We Install On-Site"
           paragraph="As a trusted battery shop in Dubai, we supply only certified, authentic batteries from the world's leading automotive brands. Every purchase includes a full manufacturer warranty and professional installation at your location."
           center
         />
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
           {batteryBrands.map((brand, i) => (
             <Link
               key={brand.slug}

@@ -99,7 +99,7 @@ const WarrantyPage = () => {
       </section>
 
       {/* Warranty length cards */}
-      <Section className="pt-16 pb-8">
+      <Section className="pt-10 md:pt-16 pb-8">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
           {warrantyLengths.map((w) => (
             <div key={`${w.value}-${w.label}`} className="rounded-lg bg-primary/5 px-4 py-6 text-center dark:bg-white/5">
@@ -135,7 +135,7 @@ const WarrantyPage = () => {
       </Section>
 
       {/* Making a warranty claim */}
-      <Section className="bg-gray-light py-16 dark:bg-bg-color-dark" title="Making a Warranty Claim — Simple Steps" mb="40px">
+      <Section className="bg-gray-light py-10 md:py-16 dark:bg-bg-color-dark" title="Making a Warranty Claim — Simple Steps" mb="40px">
         <SplitContent imageBase="about-image-2" imageAlt="Making a warranty claim" imageSide="right">
           <div className="space-y-3">
             {claimSteps.map((step, index) => (
@@ -172,7 +172,7 @@ const WarrantyPage = () => {
       </Section>
 
       {/* Quick Tips & FAQs */}
-      <Section className="py-16 md:py-20 lg:py-28" title="Quick Tips & FAQs">
+      <Section className="py-10 md:py-20 lg:py-28" title="Quick Tips & FAQs">
         <FAQAccordion faqs={faqs} />
       </Section>
 

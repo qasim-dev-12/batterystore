@@ -2,6 +2,7 @@
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import HangingCTA from "@/components/Common/HangingCTA";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
 import "../styles/index.css";
@@ -28,6 +29,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </div>
+          <HangingCTA />
           <ScrollToTop />
         </Providers>
       </body>

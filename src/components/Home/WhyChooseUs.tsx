@@ -25,7 +25,7 @@ const items = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-16 md:py-20 lg:py-28">
+    <section className="py-10 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle title="Why Choose Us" paragraph="" center />
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-4">

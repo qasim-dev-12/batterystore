@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
 const Header = () => {
@@ -55,7 +54,7 @@ const Header = () => {
                   sticky ? "py-5 xl:py-2" : "py-8"
                 } `}
               >
-                <img src="/images/logo/logo50.png" alt="800 Speedy" className="h-10 w-auto" />
+                <img src="/images/logo/logo-new.png" alt="800 Speedy" className="h-12 w-auto xl:h-20" />
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
@@ -159,9 +158,6 @@ const Header = () => {
                 >
                   Call Now
                 </a>
-                <div>
-                  <ThemeToggler />
-                </div>
               </div>
             </div>
           </div>

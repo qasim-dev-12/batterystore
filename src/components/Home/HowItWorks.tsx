@@ -16,7 +16,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="how-we-work" className="bg-gray-light dark:bg-bg-color-dark py-16 md:py-20 lg:py-28">
+    <section id="how-we-work" className="bg-gray-light dark:bg-bg-color-dark py-10 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
           title="Back on the Road in 4 Steps"

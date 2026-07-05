@@ -39,22 +39,6 @@ const BatteryBrandPage = async ({
                     {para}
                   </p>
                 ))}
-                <div className="flex flex-wrap items-center gap-4">
-                  <a
-                    href={`tel:${PHONE}`}
-                    className="rounded-xs bg-primary px-6 py-3 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
-                  >
-                    Call Now
-                  </a>
-                  <a
-                    href={WHATSAPP}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block rounded-xs bg-[#25D366] px-6 py-3 text-base font-semibold text-white duration-300 ease-in-out hover:bg-[#25D366]/90"
-                  >
-                    WhatsApp Us
-                  </a>
-                </div>
               </div>
             </div>
             <div className="w-full px-4 md:w-5/12">
@@ -72,21 +56,31 @@ const BatteryBrandPage = async ({
             <p className="text-base font-medium text-body-color">
               Get answers to all your questions from our team of experts
             </p>
-            <a
-              href={WHATSAPP}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block shrink-0 rounded-xs bg-[#25D366] px-6 py-3 text-base font-semibold text-white duration-300 ease-in-out hover:bg-[#25D366]/90"
-            >
-              WhatsApp Now
-            </a>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href={`tel:${PHONE}`}
+                className="custom-btn call-btn wobble-btn"
+              >
+                <svg className="btn-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                Call Now
+              </a>
+              <a
+                href={WHATSAPP}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="custom-btn whatsapp-btn wobble-btn"
+              >
+                <svg className="btn-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp Now
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Stats bar */}
       {brand.stats && (
-        <Section className="pt-16 pb-8">
+        <Section className="pt-10 md:pt-16 pb-8">
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
             {brand.stats.map((s) => (
               <div key={s.label} className="rounded-lg bg-primary/5 px-4 py-6 text-center dark:bg-white/5">
@@ -134,7 +128,7 @@ const BatteryBrandPage = async ({
 
       {/* Why choose us */}
       {brand.whyChooseUs && (
-        <Section className="bg-gray-light py-16 dark:bg-bg-color-dark">
+        <Section className="bg-gray-light py-10 md:py-16 dark:bg-bg-color-dark">
           <SplitContent
             imageBase="about-image-2"
             imageSrc={brand.image}
@@ -171,7 +165,7 @@ const BatteryBrandPage = async ({
       )}
 
       {/* All brands — flip cards */}
-      <Section className="bg-gray-light py-16 dark:bg-bg-color-dark" title="All Battery Brands We Offer" paragraph="Hover a brand to see what it's known for.">
+      <Section className="bg-gray-light py-10 md:py-16 dark:bg-bg-color-dark" title="All Battery Brands We Offer" paragraph="Hover a brand to see what it's known for.">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {batteryBrands.map((b) => (
               <div key={b.slug} className="h-44 [perspective:1000px]">
@@ -212,7 +206,7 @@ const BatteryBrandPage = async ({
 
       {/* FAQ */}
       {brand.faqs && (
-        <Section className="py-16 md:py-20 lg:py-28" title="Frequently Asked Questions">
+        <Section className="py-10 md:py-20 lg:py-28" title="Frequently Asked Questions">
           <FAQAccordion faqs={brand.faqs} />
         </Section>
       )}

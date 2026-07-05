@@ -14,7 +14,7 @@ const CheckIcon = () => (
 
 const BulletSection = ({ eyebrow, title, intro, bullets, reverse }: BulletSectionProps) => {
   return (
-    <section className="py-16 md:py-20 lg:py-28">
+    <section className="py-10 md:py-20 lg:py-28">
       <div className="container">
         <div className={`-mx-4 flex flex-wrap items-center gap-y-10 ${reverse ? "flex-row-reverse" : ""}`}>
           {/* Left: heading */}
@@ -22,7 +22,7 @@ const BulletSection = ({ eyebrow, title, intro, bullets, reverse }: BulletSectio
             <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-primary">
               {eyebrow}
             </span>
-            <h2 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl">
+            <h2 className="mb-5 text-2xl font-bold leading-tight text-black dark:text-white sm:text-3xl md:text-4xl">
               {title}
             </h2>
             {intro && (
