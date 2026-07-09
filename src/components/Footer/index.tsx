@@ -12,10 +12,13 @@ const Footer = () => {
                 <Link href="/" className="mb-8 inline-flex items-center gap-2">
                   <img src="/images/logo/logo-new.png" alt="800 Speedy" className="h-10 w-auto" />
                 </Link>
-                <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
+                <p className="mb-4 text-base leading-relaxed text-body-color dark:text-body-color-dark">
                   Battery Store is your one-stop battery shop in Dubai,
                   specialising in on-the-spot automotive services, available
                   24/7, 365 days a year.
+                </p>
+                <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
+                  Building # 10 Sheikh Zayed Road - Dubai
                 </p>
                 <div className="flex items-center">
                   <a
